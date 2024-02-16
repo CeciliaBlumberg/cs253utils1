@@ -30,3 +30,7 @@ body, html {
         flex-direction: column;
     }
 }
+
+h2 {
+    font-family: Arial, sans-serif;
+}
