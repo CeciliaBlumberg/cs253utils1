@@ -7,6 +7,24 @@ def average_length(user_string):
     return avg
 
 
+def total_word_count(user_string):
+    words = user_string.split()
+    if words:
+        count = len(words)
+    else:
+        count = 0
+    return count
+
+
+def total_character_count(user_string):
+    words = user_string
+    if words:
+        count = len(words)
+    else:
+        count = 0
+    return count
+
+  
 def outliers(user_string):
     words = user_string.split()
     shortest = words[0]
