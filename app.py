@@ -30,9 +30,10 @@ def wordstatsindex():
         average_length = wordstats.average_length(user_string)
         total_word_count = wordstats.total_word_count(user_string)
         total_character_count = wordstats.total_character_count(user_string)
-        return render_template('wordstats.html', average_length=average_length, total_word_count=total_word_count, total_character_count=total_character_count)
+        shortest_string, longest_string = wordstats.outliers(user_string)
+        return render_template('wordstats.html', average_length=average_length, total_word_count=total_word_count, total_character_count=total_character_count, shortest_string=shortest_string, longest_string=longest_string)
     else:
-        return render_template('wordstats.html', average_length=None, total_word_count=None, total_character_count=None)
+        return render_template('wordstats.html', average_length=None, total_word_count=None, total_character_count=None, shortest_string=None, longest_string=None)
 
 
 if __name__ == '__main__':
