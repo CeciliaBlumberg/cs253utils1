@@ -23,3 +23,15 @@ def total_character_count(user_string):
     else:
         count = 0
     return count
+
+  
+def outliers(user_string):
+    words = user_string.split()
+    shortest = words[0]
+    longest = words[0]
+    for word in words:
+        if len(word) < len(shortest):
+            shortest = word
+        if len(word) > len(longest):
+            longest = word
+    return shortest, longest

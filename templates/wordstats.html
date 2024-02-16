@@ -11,10 +11,15 @@
     {% if average_length is not none %}
         <p>Average word length: {{ average_length }}</p>
     {% endif %}
+
     {% if total_word_count is not none %}
         <p>Total word count: {{ total_word_count }}</p>
     {% endif %}
     {% if total_character_count is not none %}
         <p>Total character count: {{ total_character_count }}</p>
+
+    {% if word %}
+        <p> Shortest word in string: {{ shortest }}</p>
+        <p> Longest word in string: {{ longest }}</p>
     {% endif %}
 {% endblock %}
