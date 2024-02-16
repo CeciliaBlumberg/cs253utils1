@@ -11,4 +11,9 @@
     {% if average_length is not none %}
         <p>Average word length: {{ average_length }}</p>
     {% endif %}
+
+    {% if word %}
+        <p> Shortest word in string: {{ shortest }}</p>
+        <p> Longest word in string: {{ longest }}</p>
+    {% endif %}
 {% endblock %}
